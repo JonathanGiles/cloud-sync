@@ -24,7 +24,7 @@ import static java.nio.file.StandardWatchEventKinds.ENTRY_DELETE;
 import static java.nio.file.StandardWatchEventKinds.ENTRY_MODIFY;
 
 public class BackupEngine {
-	// local data store
+    // local data store
     private final DataStore localDataStore;
 
     // cloud store
@@ -33,20 +33,20 @@ public class BackupEngine {
     // task queue
     private final TaskQueue taskQueue;
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         Injector injector = Guice.createInjector(new BackupEngineModule());
         BackupEngine backupEngine = injector.getInstance(BackupEngine.class);
         backupEngine.start();
-	}
-
-	@Inject
-	private BackupEngine(DataStore dataStore, CloudStore cloudStore, TaskQueue taskQueue) {
-	    this.localDataStore = dataStore;
-	    this.cloudStore = cloudStore;
-	    this.taskQueue = taskQueue;
     }
 
-	private void start() {
+    @Inject
+    private BackupEngine(DataStore dataStore, CloudStore cloudStore, TaskQueue taskQueue) {
+        this.localDataStore = dataStore;
+        this.cloudStore = cloudStore;
+        this.taskQueue = taskQueue;
+    }
+
+    private void start() {
         // load backup model
         List<Backup> backupList = localDataStore.getBackupList();
 
