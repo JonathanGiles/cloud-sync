@@ -1,6 +1,6 @@
 *.class
 *.log
 .idea
-db
+/db
 config.json
 *.iml
