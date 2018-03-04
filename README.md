@@ -45,6 +45,10 @@ following:
     {
       "azureAccountName": "<put Azure Storage account name here>",
       "azureAccountKey": "<put Azure Storage account key here>",
+      "awsAccessKey": "<put aws access key here>",
+      "awsSecretKey": "<put aws secret key here>",
+      "awsRegion": "<put s3 region here, in the following format: eu-central-1>",
+      "awsBucket": "<put s3 bucket name here>",
       "backups": [
         {
           "name": "testone",
