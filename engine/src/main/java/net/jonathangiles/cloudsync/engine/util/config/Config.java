@@ -26,6 +26,22 @@ public class Config {
     @InjectConfig
     @Getter
     private String azureAccountKey;
+    
+    @InjectConfig
+    @Getter
+    private String awsRegion;
+    
+    @InjectConfig
+    @Getter
+    private String awsAccessKey;
+    
+    @InjectConfig
+    @Getter
+    private String awsSecretKey;
+    
+    @InjectConfig
+    @Getter
+    private String awsBucket;
 
     @InjectConfig("backups")
     private List<Map<String, String>> backups;

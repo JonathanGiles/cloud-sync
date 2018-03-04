@@ -28,6 +28,12 @@
             <artifactId>azure-storage</artifactId>
             <version>7.0.0</version>
         </dependency>
+        <!-- Cloud file storage using Aws S3 -->
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-s3</artifactId>
+            <version>1.11.289</version>
+        </dependency>
 
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
