@@ -18,6 +18,7 @@ public class BackupEngineModule extends AbstractModule {
         requestInjection(Config.class);
 
         bind(CloudStore.class).to(AzureCloudStore.class);
+//        bind(CloudStore.class).to(AwsCloudStore.class);
         bind(DataStore.class).to(JPADataStore.class);
     }
 }
